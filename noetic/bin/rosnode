@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+
+docker run --rm -it --network host ros:noetic-ros-core-focal rosnode "$@"
+
