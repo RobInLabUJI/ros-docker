@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+docker run --rm -it --network host \
+  -v $PWD:/catkin_ws/src:rw ros:noetic-ros-core-focal \
+  bash -c "cd /catkin_ws/src && catkin_create_pkg "$@""
+

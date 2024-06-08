@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+docker run --rm -it --network host \
+  -v $PWD:/catkin_ws:rw ros:noetic-ros-base-focal \
+  bash -c "cd /catkin_ws && catkin_make "$@""
+
