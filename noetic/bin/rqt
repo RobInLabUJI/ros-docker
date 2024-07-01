@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+
+rocker --device /dev/dri --x11 --network host \
+  --volume $PWD:/workdir:rw -- \
+  osrf/ros:noetic-desktop-full rqt "$@"
+
