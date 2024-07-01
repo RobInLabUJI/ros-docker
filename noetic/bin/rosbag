@@ -1,4 +1,6 @@
 #!/usr/bin/env bash
 
-docker run --rm -it --network host ros:noetic-ros-core-focal rosbag "$@"
+docker run --rm -it --network host \
+  -v $PWD:/workdir:rw -w /workdir \
+  ros:noetic-ros-core-focal rosbag "$@"
 
