@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-rocker --device /dev/dri --x11 --network host osrf/ros:noetic-desktop-full roslaunch "$@"
+docker run --rm -it --network host osrf/ros:noetic-desktop-full roslaunch "$@"
 

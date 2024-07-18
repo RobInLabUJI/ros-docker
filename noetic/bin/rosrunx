@@ -5,7 +5,7 @@ then IMAGE="osrf/ros:noetic-desktop-full";
 else IMAGE="robinlab/ros-docker:noetic"; 
 fi
 
-docker run --rm -it --network host $ROS_DOCKER_CATKIN_WS:/catkin_ws:rw -- \
+rocker --device /dev/dri --x11 --network host --volume $ROS_DOCKER_CATKIN_WS:/catkin_ws:rw -- \
   $IMAGE \
   rosrun "$@"
 
